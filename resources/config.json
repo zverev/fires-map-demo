@@ -1,0 +1,62 @@
+{
+    "app": {
+        "gmxMap": {
+            "mapID": "78BEB467CBA9468980A30A8A6737057C",
+            "apiKey": "W4IH6K7CJ4"
+        },
+        "zoomControl": true,
+        "hideControl": true,
+        "centerControl": {
+            "color": "#121212"
+        },
+        "calendarWidget": {},
+        "baseLayersControl": {}
+    },
+    "layers": {
+        "F2840D287CD943C4B1122882C5B92565": {
+            "heatmap": {
+                "intensityField": "HotSpotCount",
+                "intensityScale": 2,
+                "gradient": {
+                    "1.00": "#FFFFFF",
+                    "0.90": "#FFAA00",
+                    "0.85": "#FF8800",
+                    "0.75": "#E65C00",
+                    "0.55": "#DB1D00"
+                },
+                "blur": 30,
+                "radius": 17,
+                "minRadius": 7,
+                "minOpacity": 0.65
+            }
+        }
+    },
+    "state": {
+        "map": {
+            "version": "1.0.0",
+            "position": {
+                "x": 91.58203125,
+                "y": 47.98992166741417,
+                "z": 3
+            }
+        },
+        "calendar": {
+            "dateBegin": "2015-11-13T00:00:00.000Z",
+            "dateEnd": "2015-11-14T00:00:00.000Z"
+        },
+        "layersTree": {
+            "expanded": {
+                "78BEB467CBA9468980A30A8A6737057C": false
+            },
+            "visible": {
+                "F2840D287CD943C4B1122882C5B92565": true
+            },
+            "version": "1.0.0"
+        },
+        "baseLayersManager": {
+            "version": "1.0.0",
+            "currentID": "OSM",
+            "activeIDs": ["OSMHybrid", "OSM", "satellite", "relief"]
+        }
+    }
+}

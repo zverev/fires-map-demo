@@ -1,0 +1,6 @@
+{
+  "name": "fires-map",
+  "devDependencies": {
+    "gulp": "^3.8.10"
+  }
+}

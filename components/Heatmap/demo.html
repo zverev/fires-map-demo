@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>heatmap demo</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet-src.js"></script>
+        <script src="simpleheat.js"></script>
+        <script src="HeatLayer.js"></script>
+        <style>
+            html, body {
+                height: 100%;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var c = 4200;
+            var data = [
+                [50, 38, c * 0.0],
+                [50, 40, c * 0.1],
+                [50, 42, c * 0.2],
+                [50, 44, c * 0.3],
+                [50, 46, c * 0.4],
+                [50, 48, c * 0.5],
+                [50, 50, c * 0.6],
+                [50, 52, c * 0.7],
+                [50, 54, c * 0.8],
+                [50, 56, c * 0.9],
+                [50, 58, c * 1.0]
+            ];
+
+            // create a map in the "map" div, set the view to a given place and zoom
+            var map = L.map(document.body).setView([50, 50], 5);            
+
+            // add an OpenStreetMap tile layer
+            L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            }).addTo(map);
+
+
+            var heatmap = L.heatLayer(data, {
+                "gradient": {
+                    "1.00": "#FFFFFF",
+                    "0.90": "#FFAA00",
+                    "0.85": "#FF8800",
+                    "0.75": "#E65C00",
+                    "0.55": "#DB1D00"
+                },
+                "blur": 5,
+                "radius": 20,
+                "minOpacity": 0.3,
+                "minRadius": 10
+            }).addTo(map);
+
+            data.map(function(ll) {
+                L.marker(ll).addTo(map);
+            });
+        </script>
+    </body>
+</html>

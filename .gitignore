@@ -1,0 +1,8 @@
+node_modules
+dist
+temp
+local
+web.config
+*.sublime-project
+*.sublime-workspace
+/index.html
