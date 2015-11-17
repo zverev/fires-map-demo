@@ -17,6 +17,8 @@
             "heatmap": {
                 "intensityField": "HotSpotCount",
                 "intensityScale": 2,
+                "minHeatMapZoom": 6,
+                "maxHeatMapZoom": 8,
                 "gradient": {
                     "1.00": "#FFFFFF",
                     "0.90": "#FFAA00",
@@ -39,10 +41,6 @@
                 "y": 47.98992166741417,
                 "z": 3
             }
-        },
-        "calendar": {
-            "dateBegin": "2015-11-13T00:00:00.000Z",
-            "dateEnd": "2015-11-14T00:00:00.000Z"
         },
         "layersTree": {
             "expanded": {

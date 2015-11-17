@@ -129,7 +129,7 @@ var winnieCore = {
 };
 var statemanager = './external/GMXCommonComponents/StateManager';
 var utils = './external/GMXCommonComponents/Utils';
-
+var yearButtonsWidget = './components/yearButtonsWidget';
 var main = './components/main';
 
 require('./external/GMXBuilder')(gulp, {
@@ -171,6 +171,7 @@ require('./external/GMXBuilder')(gulp, {
         componentsmanager,
         statemanager,
         winnieCore,
+        yearButtonsWidget,
         main
     ]
 }]);

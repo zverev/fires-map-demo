@@ -1,0 +1,25 @@
+.yearButtonsWidget {
+    width: 300px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 4px;
+    box-shadow: 0 0 5px hsla(0, 0%, 0%, 0.35);
+    pointer-events: auto;
+}
+
+.yearButtonsWidget-yearTable {
+    display: table;
+    width: 100%;
+}
+
+.yearButtonsWidget-yearButton {
+    display: table-cell;
+    border-right: 1px solid hsl(0, 0%, 80%);
+    cursor: pointer;
+    text-align: center;
+}
+
+.yearButtonsWidget-yearButton:last-child {
+    border-right: none;
+}
