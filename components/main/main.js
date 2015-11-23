@@ -29,7 +29,13 @@ cm.define('widgetsContainerControl', ['mapApplication'], function(cm) {
 });
 
 cm.define('calendarModel', ['mapApplication'], function(cm) {
-    return cm.get('mapApplication').get('calendar');
+    var model = cm.get('mapApplication').get('calendar');
+    var dtBegin = new Date();
+    dtBegin.setUTCFullYear(model.getDateEnd().getUTCFullYear());
+    dtBegin.setUTCMonth(0);
+    dtBegin.setUTCDate(1);
+    model.setDateBegin(dtBegin);
+    return model;
 });
 
 cm.define('yearButtonsWidget', ['calendarModel', 'widgetsContainerControl'], function(cm) {
