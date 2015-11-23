@@ -12,6 +12,18 @@ cm.define('mapApplication', ['config'], function(cm, cb) {
     });
 });
 
+cm.define('map', ['mapApplication'], function(cm) {
+    return cm.get('mapApplication').get('map');
+});
+
+cm.define('layersHash', ['mapApplication'], function(cm) {
+    return cm.get('mapApplication').get('layersHash');
+});
+
+cm.define('layersTree', ['mapApplication'], function(cm) {
+    return cm.get('mapApplication').get('layersTree');
+});
+
 cm.define('widgetsContainerControl', ['mapApplication'], function(cm) {
     return cm.get('mapApplication').get('widgetsContainerControl');
 });
@@ -29,6 +41,22 @@ cm.define('yearButtonsWidget', ['calendarModel', 'widgetsContainerControl'], fun
     });
     yearButtonsWidget.appendTo(widgetsContainerControl.getContainer());
     return null;
+});
+
+cm.define('zoomHintControl', ['map', 'layersHash', 'layersTree'], function(cm) {
+    var map = cm.get('map');
+    var layersHash = cm.get('layersHash');
+    var layersTree = cm.get('layersTree');
+
+    var zoomHintControl = new nsGmx.ZoomHintControl({
+        layersTree: layersTree,
+        layersHash: layersHash,
+        layers: ['F2840D287CD943C4B1122882C5B92565']
+    });
+
+    zoomHintControl.addTo(map);
+
+    return zoomHintControl;
 });
 
 cm.define('globals', ['mapApplication'], function(cm) {

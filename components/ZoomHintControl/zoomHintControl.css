@@ -1,0 +1,12 @@
+.zoomHintControl { 
+    cursor: default;
+    padding: 4px 8px; 
+    border-radius: 4px; 
+    background: #d00; 
+    color: #eee;
+    font-weight: bold; 
+    opacity: 0; 
+    transition: opacity .5s ease;
+}
+
+.zoomHintControl-active { opacity: 1; }
