@@ -13,13 +13,16 @@
     width: 100%;
 }
 
-.yearButtonsWidget-yearButton {
+.yearButtonsWidget-yearTableCell {
     display: table-cell;
     border-right: 1px solid hsl(0, 0%, 80%);
     cursor: pointer;
     text-align: center;
 }
 
-.yearButtonsWidget-yearButton:last-child {
+.yearButtonsWidget-yearTableCell:last-child {
     border-right: none;
 }
+
+.yearButtonsWidget-yearButton { margin: 0 4px; border-bottom: 2px solid hsl(0, 0%, 100%); border-top: 2px solid hsl(0, 0%, 100%); }
+.yearButtonsWidget-yearButton_active { border-bottom: 2px solid hsl(0, 0%, 75%); }
