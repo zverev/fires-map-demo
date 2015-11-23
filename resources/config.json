@@ -9,7 +9,9 @@
         "centerControl": {
             "color": "#121212"
         },
-        "calendarWidget": {},
+        "calendarWidget": {
+            "minimized": false
+        },
         "baseLayersControl": {}
     },
     "layers": {
